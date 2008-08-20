@@ -25,7 +25,7 @@ def jx(*args)
 end
 
 const :RAKE_CLASSPATH, (Dir["**/*.jar"] << "bin").join(":")
-const :RAKE_JAVA_OPTS, " -d64 -Xmx14g "
+const :RAKE_JAVA_OPTS, " -Xmx1g "
 
 class Object
   def to_os
