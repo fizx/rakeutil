@@ -1,0 +1,25 @@
+RakeUtil
+===============================================================================
+
+Features:
+
+- include FileUtils::Verbose
+- makes Kernel#system a verbose call
+- defines Kernel#system?, which exits on failure
+- defines Kernel#jx(*args), which is basically:
+  system "java <inferred options and classpath> arg1 arg2 ..."
+- defines Kernel#const, which allows ENV variables to override constants.  i.e.
+
+  const :RAKE_CLASSPATH, (Dir["**/*.jar"] << "bin").join(":")
+  const :RAKE_JAVA_OPTS, " -d64 -Xmx14g "
+
+- defines Hash#to_os, which makes the hash into an OpenStruct
+
+
+Tasks:
+
+- util:readme -- cat rakeutil's README
+- util:dry -- Make system, FileUtils#*, and any other $dry respecting commands 
+  into no-ops (that still are verbose).  You should make your own commands 
+  respect the $dry gloabal variable.
+- util:constants -- Pretty-print all rakeutil constants
