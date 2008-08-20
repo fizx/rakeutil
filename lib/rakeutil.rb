@@ -50,7 +50,7 @@ namespace :util do
 
   desc "cat rakeutil's README"
   task :readme do
-    puts File.dirname(__FILE__) + "/../README"
+    puts File.read(File.dirname(__FILE__) + "/../README")
   end
   
   desc "Don't let fileutils and compatible commands affect the fs"
