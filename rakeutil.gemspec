@@ -18,8 +18,3 @@ spec = Gem::Specification.new do |s|
   s.autorequire = 'rakeutil'
  
 end
- 
-if $0 == __FILE__
-  Gem::manage_gems
-  Gem::Builder.new(spec).build
-end
