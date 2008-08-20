@@ -1,5 +1,9 @@
 require "fileutils"
 include FileUtils::Verbose
+require "timeout"
+include Timeout
+require "benchmark"
+include Benchmark
 require "rubygems"
 require "ostruct"
 

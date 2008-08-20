@@ -4,6 +4,8 @@ RakeUtil
 Features:
 
 - include FileUtils::Verbose
+- include Timeout
+- include Benchmark
 - makes Kernel#system a verbose call
 - defines Kernel#system?, which exits on failure
 - defines Kernel#jx(*args), which is basically:
