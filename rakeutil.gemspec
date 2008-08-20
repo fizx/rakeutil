@@ -1,5 +1,3 @@
-require 'rubygems'
- 
 spec = Gem::Specification.new do |s|
   s.name = 'rakeutil'
   s.version = "1.0.0"
