@@ -9,8 +9,7 @@ spec = Gem::Specification.new do |s|
   s.description = "Making my life easier"
  
   s.platform = Gem::Platform::RUBY
-  s.files = Dir.glob("{bin,doc,etc,lib,sample,test}/**/*").delete_if {|item| item.include?("CVS") || item.include?("rdoc")}
-  s.files.concat ["README", "README.DEV", "ChangeLog", "INSTALL"]
+  s.files = %w[README INSTALL lib/rakeutil.rb]
  
   # s.rdoc_options << '--exclude' << '.'
   # s.has_rdoc = false
