@@ -1,3 +1,5 @@
+1.2.1
+    - Fixed const_defined? bug
 1.2.0 
     - Added shell_script_test
     - Added CHANGELOG
