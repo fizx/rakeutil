@@ -49,6 +49,33 @@ class Array
   end
 end
 
+def shell_script_test(files)
+  succeeded = 0
+  failed = 0
+  
+  log_file = Module.const_defined?(TEST_LOG) ? File.open(TEST_LOG, "w") : STDER
+  
+  log_file do |log|
+    files.each do |file|
+      log.puts `#{file} 2>&1`
+      if $?.exitstatus == 0
+        print "."
+        STDOUT.flush
+        succeeded += 1
+      else
+        print "F"
+        STDOUT.flush
+        failed += 1
+      end
+    end  
+  end
+  
+  total = succeeded + failed
+  puts
+  puts "#{succeeded} of #{total} tests succeeded"
+  exit succeeded == total ? 0 : 1
+end
+
 
 namespace :util do
 

@@ -3,6 +3,7 @@ RakeUtil
 
 Features:
 
+- shell_script_test(files)
 - include FileUtils::Verbose
 - include Timeout
 - include Benchmark
@@ -16,7 +17,7 @@ Features:
   const :RAKE_JAVA_OPTS, " -d64 -Xmx14g "
 
 - defines Hash#to_os, which makes the hash into an OpenStruct
-
+- defines Kernel#const, which allows ENV variables to override constants.  i.e.
 
 Tasks:
 
